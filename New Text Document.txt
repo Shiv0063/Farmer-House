@@ -1,0 +1,90 @@
+Sales Entry
+
+* Date & Time 
+* Delivery Boy Name
+* Type Of Business
+  - B 2 B
+  - B 2 C
+* Delivery Time 
+* Application mathi Invoice Number Generate thay a Entry karva no
+* Party Add
+* Product  ( Search / Barcode / Click )
+
+
+Purchase Entry
+
+* Type of Purchase
+  - Market Yard
+  - Vendor
+  - Local Market
+* Bill.no
+* Invoice No.
+* Date & Time
+* Type of Payment
+  - Case
+  - Credit
+  - Gpay 
+  - UPI
+   - Net banking
+* Party Name 
+
+Note : Product Entry ( 
+ product Search / Barcode / product Click )
+
+- Qty
+- Auto Sales Price ( change Kari sakiye Manual ) 
+- Discount % & Discount Amount 
+* Net Amount
+
+
+Admin Account
+
+* Name
+* Mobile Number
+* Address
+* Email
+* Password
+
+Software Manu list
+* Dashboard
+* master
+* entry
+* Stock Report 
+* Report 
+* Gst
+
+MASTER
+* Add item
+* add category
+* add unit
+* add delivery boy account 
+* Admin create
+
+ENTERY
+* Sale Entry
+* Sale Return Entry
+* Purchase Entry
+* purchase Return Entry
+* Debit note 
+* Credit Note
+
+Report
+* sales Register
+* Purchase Register
+* Delivery Report
+* Ledger Report
+* Outstanding Report
+* profile report
+* Balance sheet
+* Daily Report
+* Expense report
+
+Stock Report
+* Stock Report
+* item wise stock report
+* Rate List
+* Expiry Register
+
+GST
+* GST R1
+* GSTR -3B

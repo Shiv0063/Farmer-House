@@ -77,27 +77,27 @@ WSGI_APPLICATION = 'FarmerHouse.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        "NAME": os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         "NAME": os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 
 # Render postgresSQL database
-# import dj_database_url
+import dj_database_url
 
-# RENDER_EXTERNAL_HOSTNAME = "postgres://farmer_house_user:zqcvVMH67J2QNvc87v7HfLxJqZsTckp5@dpg-cokro5md3nmc739kfc20-a.oregon-postgres.render.com/farmer_house"
-# if RENDER_EXTERNAL_HOSTNAME:
-#     ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
+RENDER_EXTERNAL_HOSTNAME = "postgres://farmer_house_user:zqcvVMH67J2QNvc87v7HfLxJqZsTckp5@dpg-cokro5md3nmc739kfc20-a.oregon-postgres.render.com/farmer_house"
+if RENDER_EXTERNAL_HOSTNAME:
+    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
-# DATABASES = {
-#     'default': dj_database_url.config(
-#         # Feel free to alter this value to suit your needs.
-#         default='postgres://farmer_house_user:zqcvVMH67J2QNvc87v7HfLxJqZsTckp5@dpg-cokro5md3nmc739kfc20-a.oregon-postgres.render.com/farmer_house',
-#         conn_max_age=600
-#     )
-# }
+DATABASES = {
+    'default': dj_database_url.config(
+        # Feel free to alter this value to suit your needs.
+        default='postgres://farmer_house_user:zqcvVMH67J2QNvc87v7HfLxJqZsTckp5@dpg-cokro5md3nmc739kfc20-a.oregon-postgres.render.com/farmer_house',
+        conn_max_age=600
+    )
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators

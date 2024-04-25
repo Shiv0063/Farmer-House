@@ -146,8 +146,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #for Login sestyem
 LOGIN_REDIRECT_URL='/'
 LOGOUT_REDIRECT_URL='/login'
-<<<<<<< HEAD
-
 
 # START keyboard_shortcuts settings #
 HOTKEYS = [
@@ -162,5 +160,4 @@ HOTKEYS = [
         ]
 SPECIAL_DISABLED = True
 # END keyboard_shortcuts settings #
-=======
->>>>>>> 4a6d36bce477b673a8831d8e69f98fe4ba55f04d
+

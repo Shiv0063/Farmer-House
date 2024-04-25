@@ -1,4 +1,5 @@
 ﻿{% load static %}
+{% load hotkeys %}
 <!DOCTYPE html>
 <html lang="en" dir="ltr" data-bs-theme="light" data-color-theme="Blue_Theme" data-layout="horizontal">
 
@@ -10,6 +11,7 @@
   <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
   <link rel="stylesheet" href="{% static 'assets/libs/select2/dist/css/select2.min.css' %}">
   <title>Farmer House</title>
+  {% setup_hotkeys %}
   <link rel="stylesheet" href="{% static 'assets/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css' %}">
   <link rel="stylesheet" href="{% static 'assets/js/buttons/2.4.2/css/buttons.dataTables.min.css' %}">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/1.35.0/iconfont/tabler-icons.min.css" rel="stylesheet">
@@ -124,7 +126,7 @@
           <div class="sidebarmenu">
             <div class="brand-logo d-flex align-items-center nav-logo">
               <a href="/" class="text-nowrap logo-img">
-                <img src="{% static 'assets/images/logos/logo.svg' %}" alt="Logo">
+                <img src="{% static 'assets/images/logos/logo.png' %}" width="100px" alt="Logo">
               </a>
 
             </div>
@@ -1313,7 +1315,7 @@
             </ul>
 
             <div class="d-block d-lg-none py-9 py-xl-0">
-              <img src="{% static 'assets/images/logos/logo.svg' %}" alt="matdash-img">
+              <img src="{% static 'assets/images/logos/logo.png' %}" width="100px" alt="matdash-img">
             </div>
             <a class="navbar-toggler p-0 border-0 nav-icon-hover-bg rounded-circle" href="javascript:void(0)"
               data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
@@ -1642,7 +1644,7 @@
               </li>
               <li class="nav-item d-none d-xl-flex align-items-center">
                 <a href="/" class="text-nowrap nav-link">
-                  <img src="{% static 'assets/images/logos/logo.svg' %}" alt="matdash-img">
+                  <img src="{% static 'assets/images/logos/logo.png' %}" width="85px" class="img-fluid" alt="matdash-img">
                 </a>
               </li>
               <li class="nav-item d-none d-xl-flex align-items-center nav-icon-hover-bg rounded-circle">
@@ -1775,7 +1777,7 @@
             </ul>
             <div class="d-block d-xl-none">
               <a href="/" class="text-nowrap nav-link">
-                <img src="{% static 'assets/images/logos/logo.svg' %}" alt="matdash-img">
+                <img src="{% static 'assets/images/logos/logo.png' %}" width="100px" alt="matdash-img">
               </a>
             </div>
             <a class="navbar-toggler nav-icon-hover p-0 border-0 nav-icon-hover-bg rounded-circle"
@@ -1962,7 +1964,7 @@
       </header>
       <!--  Header End -->
 
-      <aside class="left-sidebar with-horizontal">
+      <aside class="left-sidebar with-horizontal mt-4">
         <!-- Sidebar scroll-->
         <div>
           <!-- Sidebar navigation-->

@@ -37,7 +37,7 @@ def is_admin(user):
 @login_required(login_url='Login')
 def home(request):
     if is_admin(request.user):
-        return render(request,'dashboard.html')
+        return render(request,'admin/dashboard.html')
     if is_user(request.user):
         return render(request,'dashboard.html')
     

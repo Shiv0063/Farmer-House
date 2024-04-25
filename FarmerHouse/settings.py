@@ -15,7 +15,7 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATE_DIR = os.path.join(BASE_DIR,'main/templates')
-STATIC_DIR=os.path.join(BASE_DIR,'static')
+STATIC_DIR=os.path.join(BASE_DIR,'main/static')
 MEDIA_ROOT=os.path.join(BASE_DIR,'main/media')
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'main'
+    'main',
+    # Added.
+    'keyboard_shortcuts',
 ]
 
 MIDDLEWARE = [
@@ -75,27 +77,27 @@ WSGI_APPLICATION = 'FarmerHouse.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         "NAME": os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        "NAME": os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
 
 # Render postgresSQL database
-import dj_database_url
+# import dj_database_url
 
-RENDER_EXTERNAL_HOSTNAME = "postgres://farmer_house_user:zqcvVMH67J2QNvc87v7HfLxJqZsTckp5@dpg-cokro5md3nmc739kfc20-a.oregon-postgres.render.com/farmer_house"
-if RENDER_EXTERNAL_HOSTNAME:
-    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
+# RENDER_EXTERNAL_HOSTNAME = "postgres://farmer_house_user:zqcvVMH67J2QNvc87v7HfLxJqZsTckp5@dpg-cokro5md3nmc739kfc20-a.oregon-postgres.render.com/farmer_house"
+# if RENDER_EXTERNAL_HOSTNAME:
+#     ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
-DATABASES = {
-    'default': dj_database_url.config(
-        # Feel free to alter this value to suit your needs.
-        default='postgres://farmer_house_user:zqcvVMH67J2QNvc87v7HfLxJqZsTckp5@dpg-cokro5md3nmc739kfc20-a.oregon-postgres.render.com/farmer_house',
-        conn_max_age=600
-    )
-}
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         # Feel free to alter this value to suit your needs.
+#         default='postgres://farmer_house_user:zqcvVMH67J2QNvc87v7HfLxJqZsTckp5@dpg-cokro5md3nmc739kfc20-a.oregon-postgres.render.com/farmer_house',
+#         conn_max_age=600
+#     )
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
@@ -144,3 +146,18 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #for Login sestyem
 LOGIN_REDIRECT_URL='/'
 LOGOUT_REDIRECT_URL='/login'
+
+
+# START keyboard_shortcuts settings #
+HOTKEYS = [
+            {'keys': 'shift+s',  # go home
+            'link': '/AddSalesEntry'},
+            {'keys': 'shift+p',
+            'link': '/AddPurchaseEntry',},
+            {'keys': 'shift+i',
+            'link': '/AddProduct',},
+            {'keys': 'shift+a',
+            'link': '/UserAccount',},
+        ]
+SPECIAL_DISABLED = True
+# END keyboard_shortcuts settings #

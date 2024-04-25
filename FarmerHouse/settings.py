@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'main',
     # Added.
-    'keyboard_shortcuts',
+    # 'keyboard_shortcuts',
 ]
 
 MIDDLEWARE = [
@@ -134,7 +134,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'main/static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'main/static')]
 STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
 
@@ -148,16 +148,16 @@ LOGIN_REDIRECT_URL='/'
 LOGOUT_REDIRECT_URL='/login'
 
 # START keyboard_shortcuts settings #
-HOTKEYS = [
-            {'keys': 'shift+s',  # go home
-            'link': '/AddSalesEntry'},
-            {'keys': 'shift+p',
-            'link': '/AddPurchaseEntry',},
-            {'keys': 'shift+i',
-            'link': '/AddProduct',},
-            {'keys': 'shift+a',
-            'link': '/UserAccount',},
-        ]
-SPECIAL_DISABLED = True
+# HOTKEYS = [
+#             {'keys': 'shift+s',  # go home
+#             'link': '/AddSalesEntry'},
+#             {'keys': 'shift+p',
+#             'link': '/AddPurchaseEntry',},
+#             {'keys': 'shift+i',
+#             'link': '/AddProduct',},
+#             {'keys': 'shift+a',
+#             'link': '/UserAccount',},
+#         ]
+# SPECIAL_DISABLED = True
 # END keyboard_shortcuts settings #
 

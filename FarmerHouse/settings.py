@@ -134,7 +134,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'main/static')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'main/static')]
 STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
 
@@ -146,6 +146,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #for Login sestyem
 LOGIN_REDIRECT_URL='/'
 LOGOUT_REDIRECT_URL='/login'
+<<<<<<< HEAD
 
 
 # START keyboard_shortcuts settings #
@@ -161,3 +162,5 @@ HOTKEYS = [
         ]
 SPECIAL_DISABLED = True
 # END keyboard_shortcuts settings #
+=======
+>>>>>>> 4a6d36bce477b673a8831d8e69f98fe4ba55f04d
